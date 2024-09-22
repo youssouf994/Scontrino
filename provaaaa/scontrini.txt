@@ -1,0 +1,1 @@
+Youss_Byte,P. Iva: 0015248745,scontrino n: 9,Codice cliente: 0,mele   4.200000    x1.500000,pesce   15.350000    x1.300000,totale= 26.255000;
