@@ -164,7 +164,7 @@ void Scontrino::salvaScontrinoSuFile()
             scrivi << it->toString() <<",";
             it++;
         }
-        scrivi << "totale= " + to_string(this->prezzo) << ";";
+        scrivi << "totale= " + to_string(this->prezzo) << ";\n";
         
     }
 }
@@ -174,62 +174,3 @@ void Scontrino::leggiScontrino()
 
 }
 
-Clienti::Clienti()
-{
-
-}
-
-
-int Clienti::generaIdCliente()
-{
-    int a = 0;
-    return a;
-}
-
-int Clienti::checkIdClienti()
-{
-    int id=0, i=0, pos;
-    string idC, appoggio, appoggio2;
-
-    ifstream leggi("scontrini.txt", ios::in);
-
-    while (getline(leggi, appoggio))
-    {
-        i++;
-        if (i == 3)
-        {
-            pos = appoggio.find(":")+1;
-            appoggio = appoggio.substr(pos);
-            cout << appoggio;
-           // id = atoi(appoggio2);
-        }
-    }
-    return id;
-}
-
-void Clienti::setIdCliente(int idCliente)
-{
-    this->idCliente = idCliente;
-}
-
-int Clienti::getIdCliente()
-{
-    return this->idCliente;
-}
-
-void Clienti::aggiungiCliente()
-{
-    cout << "inserire nome cliente\n";
-}
-
-Cliente::Cliente()
-{
-
-}
-
-Cliente::Cliente(int idCliente, string nome, string cognome)
-{
-    this->idCliente=idCliente;
-    this->nome=nome;
-    this->cognome=cognome;
-}

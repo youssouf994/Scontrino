@@ -56,23 +56,28 @@ class Cliente
     public:
         Cliente();
         Cliente(int idCliente, string nome, string cognome);
+        string getNome();
+        string getCognome();
+        int getId();
 
 };
 
-class Clienti
+class GestisciClienti
 {
     private:
         int idCliente;
         vector<Scontrino> vScontrini;
         vector<Cliente> vClienti;
+        
 
     public:
-        Clienti();
+        GestisciClienti();
         int generaIdCliente();
         int checkIdClienti();
         int getIdCliente();
         void setIdCliente(int idCliente);
         void aggiungiCliente();
+        void salvaCliente(Cliente cli);
 }; 
 
 
