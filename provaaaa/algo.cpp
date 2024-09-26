@@ -167,6 +167,7 @@ void Scontrino::salvaScontrinoSuFile()
         scrivi << "totale= " + to_string(this->prezzo) << ";\n";
         
     }
+    scrivi.close();
 }
 
 void Scontrino::leggiScontrino()

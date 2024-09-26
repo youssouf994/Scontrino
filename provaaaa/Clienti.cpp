@@ -9,27 +9,60 @@
 
 using namespace std;
 
+//costruttore 
 GestisciClienti::GestisciClienti()
 {
 
 }
 
-
+//controllo sia che non ci sia un id uguale nel file e sia inserisco il nuovo clliente nel db
 int GestisciClienti::generaIdCliente()
 {
-    int idUprovvisorio = rand()%100;
-    int appoggio;
+    int idUprovvisorio ;
+    string appoggio, a2;
+    size_t app;
+    int idU, i=0;
+    bool pass;
     ifstream leggi("clienti.txt", ios::in);
 
-    while (!leggi.eof())
+    if (leggi.is_open())
     {
-        while ( (appoggio= leggi.get()) != ' ')
+        do
         {
+            pass = true;
+            idUprovvisorio = rand() % 100;
 
-        }
+            while (getline(leggi, appoggio))
+            {
+                app = appoggio.find(';');
+                if (app != std::string::npos)
+                {
+                    a2=appoggio.substr(0, app);
+                    idU = stoi(a2);
+                    if (idU == idUprovvisorio)
+                    {
+                        pass = false;
+                        break;
+                    }
+                    else
+                    {
+                        i = idUprovvisorio;
+                    }
+                }
+            }
+
+        } while (!true);
     }
-    return idU;
+    else
+    {
+        i=1;
+    }
+
+    leggi.close();
+
+    return i;
 }
+
 
 int GestisciClienti::checkIdClienti()
 {
@@ -40,14 +73,12 @@ int GestisciClienti::checkIdClienti()
 
     while (getline(leggi, appoggio))
     {
-        i++;
-        if (i == 3)
-        {
-            pos = appoggio.find(":") + 1;
-            appoggio = appoggio.substr(pos);
-            cout << appoggio;
-            // id = atoi(appoggio2);
-        }
+        
+        pos = appoggio.find(":") + 1;
+        appoggio = appoggio.substr(pos);
+        cout << appoggio;
+        // id = atoi(appoggio2);
+        
     }
     return id;
 }
@@ -65,7 +96,7 @@ int GestisciClienti::getIdCliente()
 void GestisciClienti::aggiungiCliente()
 {
     string nome, cognome;
-    int idU=0;
+    int idU;
 
     cout << "inserire nome cliente\n";
     cin >> nome;
@@ -73,7 +104,7 @@ void GestisciClienti::aggiungiCliente()
     cout << "inserire cognome cliente\n";
     cin >> cognome;
 
-    //funzione genera id
+    idU = generaIdCliente();
 
     Cliente cliente(idU, nome, cognome);
     salvaCliente(cliente);
@@ -83,7 +114,7 @@ void GestisciClienti::salvaCliente(Cliente cli)
 {
     ofstream scrivi("clienti.txt", ios :: out | ios :: app);
 
-    scrivi << cli.getId() + ", " + cli.getCognome() + ", " + to_string(cli.getId()) + ";\n";
+    scrivi << to_string(cli.getId()) + ", " + cli.getCognome() + ", " + cli.getNome() + ";\n";
     scrivi.close();
 
 }

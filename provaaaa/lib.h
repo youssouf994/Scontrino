@@ -68,11 +68,11 @@ class GestisciClienti
         int idCliente;
         vector<Scontrino> vScontrini;
         vector<Cliente> vClienti;
-        
+        int generaIdCliente();
 
     public:
         GestisciClienti();
-        int generaIdCliente();
+        
         int checkIdClienti();
         int getIdCliente();
         void setIdCliente(int idCliente);

@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int num;
-
+    GestisciClienti gc;
     int scelta;
     string nome;
     double prezzo;
@@ -16,7 +16,7 @@ int main()
 
     do
     {
-        Clienti clienti;
+        GestisciClienti clienti;
         quanti = clienti.checkIdClienti();
         cout << "1.visualizza storico clienti\n";
         cout << "2.calcola nuovo scontrino\n";
@@ -65,6 +65,7 @@ int main()
         break;
 
         case 3 :
+            gc.aggiungiCliente();
 
         break;
 
