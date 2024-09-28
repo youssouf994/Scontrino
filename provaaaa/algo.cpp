@@ -170,7 +170,7 @@ void Scontrino::salvaScontrinoSuFile()
     scrivi.close();
 }
 
-void Scontrino::leggiScontrino()
+void Scontrino::setIdCliente(int id)
 {
 
 }

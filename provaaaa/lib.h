@@ -43,7 +43,8 @@ public:
     int getNumScontrino();
     void leggiNumScontrino();
     void salvaScontrinoSuFile();
-    void leggiScontrino();
+    //void leggiScontrino();
+    void setIdCliente(int id);
 };
 
 class Cliente
@@ -71,8 +72,7 @@ class GestisciClienti
         int generaIdCliente();
 
     public:
-        GestisciClienti();
-        
+        GestisciClienti();  
         int checkIdClienti();
         int getIdCliente();
         void setIdCliente(int idCliente);

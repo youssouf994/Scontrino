@@ -19,7 +19,7 @@ int main()
         GestisciClienti clienti;
         quanti = clienti.checkIdClienti();
         cout << "1.visualizza storico clienti\n";
-        cout << "2.calcola nuovo scontrino\n";
+        cout << "2.calcola nuovo scontrino\n"; 
         cout << "3.registra nuovo cliente\n";
         cin >> scelta;
 
