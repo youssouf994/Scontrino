@@ -1,7 +1,8 @@
 #include <vector>
 #include <string>
 #include <fstream>
-#include "lib.h"
+#include "scontrino.h"
+#include "articoli.h"
 
 using namespace std;
 
@@ -13,20 +14,6 @@ Scontrino::Scontrino()
 void Scontrino::setNumScontrino(int num)
 {
     this->num = num;
-}
-
-
-Articoli::Articoli()
-{
-
-}
-
-
-Articoli::Articoli(string nome, double prezzo, double quanti)
-{
-    this->nome = nome;
-    this->prezzo = prezzo;
-    this->quanti = quanti;
 }
 
 void Scontrino::setArticoli(Articoli a)
@@ -54,21 +41,11 @@ void Scontrino::setTotale()
     }
 }
 
-double Articoli::getQuanti()
-{
-    return this->quanti;
-}
-
-double Articoli::getPrezzo()
-{
-    return this->prezzo;
-}
-
-
 void Scontrino::getScontrino()
 {
     cout << this->nomeAzienda << endl << "P. Iva: " << this->pIva << endl;
     cout << "scontrino n: " << this->num << endl;
+    cout << "codice cliente: " << this->idCliente << endl;
 
     vector<Articoli>::iterator it = artic.begin();
 
@@ -79,17 +56,6 @@ void Scontrino::getScontrino()
     }
 
     cout << "totale= " + to_string(this->prezzo) << endl;
-}
-
-
-string Articoli::toString()
-{
-    string riga;
-
-
-    riga = this->nome + "   " + to_string(this->prezzo) + "    x" + to_string(this->quanti);
-
-    return riga;
 }
 
 
@@ -157,21 +123,20 @@ void Scontrino::salvaScontrinoSuFile()
     {
         scrivi << this->nomeAzienda << "," << "P. Iva: " << this->pIva << ",";
         scrivi << "scontrino n: " << this->num << ",";
-        scrivi << "Codice cliente: "<<idCliente << ",";
+        scrivi << "Codice cliente: " << idCliente << ",";
 
         while (it != artic.end())
         {
-            scrivi << it->toString() <<",";
+            scrivi << it->toString() << ",";
             it++;
         }
         scrivi << "totale= " + to_string(this->prezzo) << ";\n";
-        
+
     }
     scrivi.close();
 }
 
 void Scontrino::setIdCliente(int id)
 {
-
+    idCliente = id;
 }
-

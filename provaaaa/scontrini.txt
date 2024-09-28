@@ -1,1 +1,6 @@
 Youss_Byte,P. Iva: 0015248745,scontrino n: 11,Codice cliente: 0,sadf   7.000000    x4.000000,wef   47.000000    x1.000000,wef   3.650000    x6.000000,totale= 96.900000;
+Youss_Byte,P. Iva: 0015248745,scontrino n: 12,Codice cliente: 0,efewf   45.000000    x1.000000,totale= 45.000000;
+Youss_Byte,P. Iva: 0015248745,scontrino n: 13,Codice cliente: 41,ef   4.000000    x1.000000,totale= 4.000000;
+Youss_Byte,P. Iva: 0015248745,scontrino n: 14,Codice cliente: 1,bgbgt   78.000000    x25.000000,hyhyju   45.000000    x8.000000,totale= 2310.000000;
+Youss_Byte,P. Iva: 0015248745,scontrino n: 15,Codice cliente: 85,vfvf   4.000000    x1.000000,totale= 4.000000;
+Youss_Byte,P. Iva: 0015248745,scontrino n: 16,Codice cliente: 1,vfvf   7.000000    x4.000000,bg   9.000000    x2.000000,totale= 46.000000;

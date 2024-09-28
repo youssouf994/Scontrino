@@ -128,12 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="algo.cpp" />
-    <ClCompile Include="Clienti.cpp" />
+    <ClCompile Include="articoli.cpp" />
+    <ClCompile Include="cliente.cpp" />
+    <ClCompile Include="gestisciCliente.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="scontrinio.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib.h" />
+    <ClInclude Include="clienti.h" />
+    <ClInclude Include="gestisciCliente.h" />
+    <ClInclude Include="articoli.h" />
+    <ClInclude Include="scontrino.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="salvaNumero.txt" />

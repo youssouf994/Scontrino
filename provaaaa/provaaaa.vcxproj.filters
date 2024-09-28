@@ -18,16 +18,31 @@
     <ClCompile Include="main.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="algo.cpp">
+    <ClCompile Include="articoli.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="Clienti.cpp">
+    <ClCompile Include="scontrinio.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="cliente.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="gestisciCliente.cpp">
       <Filter>File di origine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lib.h">
+    <ClInclude Include="articoli.h">
       <Filter>File di origine</Filter>
+    </ClInclude>
+    <ClInclude Include="gestisciCliente.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="clienti.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="scontrino.h">
+      <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
